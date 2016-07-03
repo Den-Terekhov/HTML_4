@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, 
+body {
+  height: 100%;
+}
+
+body {
+  font-family: tahoma;
+  padding: 38px 0 0 0;
+  background-color: #0c74a0;
+  background: url(../img/Bg-line.jpg) repeat-x;
+}
+
+.clearfix:after {
+  content: '';
+  clear: both;
+  display: block;
+} 
+
+/*PAGE*/
+
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  flex: 1 0 auto;
+  position: relative;
+  width: 1000px;
+  margin: 0 auto;
+  background: white;
+  box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.75);
+}
+
+/*HEADER*/
+
+.logo {
+  float: left;
+  margin-left: 27px;
+  margin-top: 11px;
+}
+
+.logo-text {
+  position: absolute;
+  left: 100px;
+  top: 110px;
+  font-size: 12px;
+  color: #128aa7;
+}
+
+.contacts {
+  margin: 5px 30px;
+  float: right;
+}
+
+.contacts li {
+  font-size: 13px;
+  line-height: 20px;
+  list-style-type: none;
+  color: #128aa7;
+}
+
+.contacts li a {
+  text-decoration: none;
+  color: #128aa7;
+}
+
+.countries {
+  margin-top: 20px;
+  margin-right: 30px;
+  clear: right;
+  float: right;
+}
+
+.countries_menu li {
+  width: 56px;
+  float: left;
+  list-style-type: none;
+}
+
+.countries_menu li a {
+  display: block;
+  font-size: 10px;
+  color: #128aa7;
+}
+
+figure {
+  display: block;
+  text-align: center;
+}
+
+.header-photo {
+  border-top: 1px solid #128aa7;
+  border-bottom: 1px solid #128aa7;
+  margin-bottom: -3px;
+}
+
+/*HORIZONTAL MENU*/
+
+ul {
+  display: block;
+  margin: 0;
+  padding: 0; 
+  list-style: none;
+}
+
+ul:after {
+  display: block;
+  content: ' ';
+  clear: both;
+  float: none;
+}
+
+ul.menu {
+  background-color: #333333;
+  border-bottom: 1px solid #000;
+  box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.5);
+  position: relative;
+  z-index: 1;
+}
+
+ul.menu>li {
+  float: left;
+  position: relative;
+}
+
+ul.menu>li>a {
+  display: block;
+  margin-right: 1px;
+  padding: 4px 35px;
+  font-size: 14px;
+  color: white;
+  background-color: #333333;
+  text-decoration: none;
+}
+
+ul.submenu {
+  display: none;
+  position: absolute;
+  width: 150px;
+  top: 26px;
+  left: 25px;
+  background-color: white;
+  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.5);
+}
+
+ul.submenu>li {
+  display: block;
+}
+
+ul.submenu>li>a {
+  display: block;
+  padding: 3px 10px;
+  font-size: 14px;
+  color: white;
+  background-color: #333333;
+  text-decoration: none;
+}
+
+ul.menu>li:hover>ul.submenu {
+  display: block;
+}
+
+/*COLUMNS*/
+
+.container {
+  overflow-x: hidden;
+}
+
+.fon1 {  /* фон для левой колонки */
+  width: 100%;
+  background: #edeef0;
+  float: left; /* делаем все обертки плавающими блоками чтобы избежать добавления блока с clear: both; */
+  position: relative; /* чтобы иметь возможность сместить фон */
+  right: 58%; /* обнажаем фон для центральной колонки. 58% - ширина центральной колонки */
+  border-right: 1px solid #c7cacf;
+}
+
+ .fon2 {/* фон для центральной колонки */
+  width: 100%;
+  background: #ffffff;
+  float: left;
+  position: relative;
+  right: 21%; /* обнажаем фон для правой колонки. 21% - ширина правой колонки */
+  border-right: 1px solid #c7cacf;
+}
+
+.fon3 {/* фон для правой колонки */
+  width: 100%;
+  background: #edeef0;
+  float: left;
+}
+
+main {
+  padding: 10px;
+}
+
+.column-title {
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+  color: #424c43;
+}
+
+.leftColumn {
+  width: 19%;
+  padding: 1%;
+  float: left;
+  overflow: hidden; /* страховка от ломки верстки объектами шире размера колонки-родителя */
+  position:relative;
+  left:79%; /* возвращаем колонки с контентом на свои позиции. 79% - сумма смещений оберток fon1 и fon2 */
+  font-size: 14px;
+  color: #424c43;
+  line-height: 24px;
+  letter-spacing: -1px;
+}
+
+.centerColumn {
+  width: 58%;
+  float: left;
+  overflow: hidden;
+  position:relative;
+  left:79%;
+}
+
+.rightColumn {
+  width: 19%;
+  padding: 1%;
+  float: left;
+  overflow: hidden;
+  position:relative;
+  left:79%;
+  font-size: 14px;
+  color: #424c43;
+  line-height: 24px;
+  letter-spacing: -1px;
+}
+
+/*FOOTER*/
+
+footer {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 12px;
+}
